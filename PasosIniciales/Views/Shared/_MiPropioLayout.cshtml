@@ -1,0 +1,14 @@
+﻿<html>
+    <head>
+        <title>Titulo a corregir</title>
+        @RenderSection("head",false)
+    </head>
+    <body>
+        <a asp-controller="Home" asp-action="Index">Home</a> | 
+        <a asp-controller="Home" asp-action="Privacy">Policy</a> | 
+        <a asp-controller="mapaches" asp-action="index">Mapaches</a> | <br>
+        @RenderBody()
+        <br>
+        Copyright PepeSoft 2023
+    </body>
+</html>
