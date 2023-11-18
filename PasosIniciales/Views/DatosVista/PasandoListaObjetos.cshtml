@@ -1,0 +1,34 @@
+﻿<h3>Lista de productos</h3>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            
+        </div>
+        <div class="col-8">
+            <table class="table table-primary">
+                <tr>
+                    <td>ID</td>
+                    <td>Nombre</td>
+                    <td>Foto</td>
+                    <td>Precio</td>
+                    <td>Cantidad</td>
+                    <td>Total</td>
+                </tr>
+                @foreach(var prod in ViewBag.productos)
+                {
+                    <tr>
+                        <td>@prod.Id</td>
+                        <td>@prod.Nombre</td>
+                        <td><img src="~/images/@prod.Foto" width="90px"/></td>
+                        <td>@prod.Precio</td>
+                        <td>@prod.Cantidad</td>
+                        <td>@(prod.Precio * prod.Cantidad)</td>
+                    </tr>
+                }
+            </table>
+        </div>
+        <div class="col">
+            
+        </div>
+    </div>
+</div>

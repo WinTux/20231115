@@ -1,0 +1,28 @@
+﻿<link href="~/css/estilo.css">
+<h3>Datos de un producto</h3>
+<table class="table">
+    <tr>
+        <td>ID</td>
+        <td>@ViewBag.producto.Id</td>
+    </tr>
+    <tr>
+        <td>Nombre</td>
+        <td>@ViewBag.producto.Nombre</td>
+    </tr>
+    <tr>
+        <td>Foto</td>
+        <td><img src="~/images/@ViewBag.producto.Foto" width="90px"/></td>
+    </tr>
+    <tr>
+        <td>Precio</td>
+        <td>@ViewBag.producto.Precio</td>
+    </tr>
+    <tr>
+        <td>Cantidad</td>
+        <td>@ViewBag.producto.Cantidad</td>
+    </tr>
+    <tr>
+        <td>Total</td>
+        <td>@(ViewBag.producto.Precio * ViewBag.producto.Cantidad)</td>
+    </tr>
+</table>
