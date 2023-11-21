@@ -7,8 +7,7 @@ namespace PasosIniciales.Controllers
     public class DatosVistaController : Controller
     {
         [Route("index")]
-        [Route("")]
-        [Route("~/")]
+        
         public IActionResult Index()
         {
             ViewBag.edad = 19;

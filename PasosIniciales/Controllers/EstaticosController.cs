@@ -6,8 +6,7 @@ namespace PasosIniciales.Controllers
     public class EstaticosController : Controller
     {
         [Route("index")]
-        [Route("")]
-        [Route("~/")]
+        
         public IActionResult Index()
         {
             return View();

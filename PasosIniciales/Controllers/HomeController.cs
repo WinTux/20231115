@@ -5,6 +5,7 @@ using System.Diagnostics;
 
 namespace PasosIniciales.Controllers
 {
+    [Route("Home")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -18,11 +19,12 @@ namespace PasosIniciales.Controllers
         {
             return 56;
         }
+        [Route("Index")]
         public IActionResult Index()
         {
             return View();
         }
-
+        [Route("Privacy")]
         public IActionResult Privacy()
         {
             return View();
