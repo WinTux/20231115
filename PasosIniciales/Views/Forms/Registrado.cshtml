@@ -1,0 +1,40 @@
+﻿<h3>Datos registrados</h3>
+<table class="table table-success">
+    <tr>
+        <td>ID</td>
+        <td>@ViewBag.cuenta.Id</td>
+    </tr>
+    <tr>
+        <td>Usuario</td>
+        <td>@ViewBag.cuenta.Usuario</td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td>@ViewBag.cuenta.Password</td>
+    </tr>
+    <tr>
+        <td>Disponible</td>
+        <td>@ViewBag.cuenta.Disponible</td>
+    </tr>
+    <tr>
+        <td>Genero</td>
+        <td>@ViewBag.cuenta.Genero</td>
+    </tr>
+    <tr>
+        <td>Descripcion</td>
+        <td>@ViewBag.cuenta.Descripcion</td>
+    </tr>
+    <tr>
+        <td>Lenguajes de programacion</td>
+        <td>
+            @foreach (var leng in ViewBag.cuenta.Lenguajes)
+            {
+                <p>@leng</p>
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>Cargo</td>
+        <td>@ViewBag.cuenta.Cargo</td>
+    </tr>
+</table>

@@ -61,7 +61,17 @@ namespace PasosIniciales.Controllers
             cuentaVistaModelo.Cargos = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(cargos, "Id", "Nombre");
 
             //TODO: Pasar el objeto a la vista y crear la vista... etc.
-            return View();
+            return View("Index", cuentaVistaModelo);
+        }
+        [Route("registrar")]
+        public IActionResult Registrar(CuentaVistaModelo cuentaVistaModelo, List<Lenguaje> lenguajes)
+        {
+            cuentaVistaModelo.Cuenta.Lenguajes = new List<string>();
+            foreach (var leng in lenguajes)
+                if (leng.tickeado)
+                    cuentaVistaModelo.Cuenta.Lenguajes.Add(leng.Id);
+            ViewBag.cuenta = cuentaVistaModelo.Cuenta;
+            return View("Registrado");
         }
     }
 }
