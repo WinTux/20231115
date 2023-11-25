@@ -1,0 +1,42 @@
+﻿@model PasosIniciales.Models.Producto2
+
+<form asp-controller="subida" asp-action="guardar2" method="post" enctype="multipart/form-data">
+    <table class="table">
+        <tr>
+            <td>ID</td>
+            <td>
+                <input type="text" asp-for="Id">
+            </td>
+        </tr>
+        <tr>
+            <td>Nombre</td>
+            <td>
+                <input type="text" asp-for="Nombre">
+            </td>
+        </tr>
+        <tr>
+            <td>Foto(s)</td>
+            <td>
+                <input type="file" name="fotos" multiple="multiple">
+            </td>
+        </tr>
+        <tr>
+            <td>Precio</td>
+            <td>
+                <input type="text" asp-for="Precio">
+            </td>
+        </tr>
+        <tr>
+            <td>Cantidad</td>
+            <td>
+                <input type="number" asp-for="Cantidad">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" class="btn btn-success" value="GUARDAR">
+            </td>
+        </tr>
+    </table>
+</form>
