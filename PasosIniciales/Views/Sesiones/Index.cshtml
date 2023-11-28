@@ -1,0 +1,5 @@
+﻿@using Microsoft.AspNetCore.Http;
+
+<h3>Usando sesiones</h3>
+Nombre: @Context.Session.GetString("usuario") <br />
+Edad: @Context.Session.GetInt32("edad")
