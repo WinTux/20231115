@@ -1,0 +1,37 @@
+﻿@model PasosIniciales.Models.Usuario
+
+<h3>Registro de usuario (con validacion)</h3>
+<form asp-asp-controller="validacion" asp-action="guardar" method="post">
+    <table class="table">
+        <tr>
+            <td>Nombre</td>
+            <td><input asp-for="Nombre"></td>
+            <td><span asp-validation-for="Nombre"></span></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input asp-for="Password" type="password"></td>
+            <td><span asp-validation-for="Password"></span></td>
+        </tr>
+        <tr>
+            <td>Edad</td>
+            <td><input asp-for="Edad"></td>
+            <td><span asp-validation-for="Edad"></span></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input asp-for="Email"></td>
+            <td><span asp-validation-for="Email"></span></td>
+        </tr>
+        <tr>
+            <td>Pagina Web</td>
+            <td><input asp-for="PaginaWeb"></td>
+            <td><span asp-validation-for="PaginaWeb"></span></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><input type="submit" value="GUARDAR"></td>
+        </tr>
+    </table>
+</form>
