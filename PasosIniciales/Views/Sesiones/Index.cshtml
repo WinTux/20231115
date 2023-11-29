@@ -1,5 +1,33 @@
 ﻿@using Microsoft.AspNetCore.Http;
+@using PasosIniciales.Models;
+@using PasosIniciales.Herramientas;
 
 <h3>Usando sesiones</h3>
 Nombre: @Context.Session.GetString("usuario") <br />
-Edad: @Context.Session.GetInt32("edad")
+Edad: @Context.Session.GetInt32("edad")<br><br />
+
+<h3>Rescatando un objeto producto</h3>
+@{
+    Producto3 pr = Conversor.JsonAobjeto<Producto3>(Context.Session, "producto");
+}
+<br />
+ID: @pr.Id <br />
+Nombre: @pr.Nnombre <br />
+Precio: @pr.Precio<br />
+<h3>Rescatando una lista de objetos producto</h3>
+@{
+    List<Producto3> prs = Conversor.JsonAobjeto<List<Producto3>>(Context.Session, "productos");
+}
+
+@foreach (Producto3 p in prs)
+{
+    <div>
+        ID: @p.Id
+        <br />
+        Nombre: @p.Nnombre
+        <br />
+        Precio: @p.Precio
+        <br />
+    </div>
+
+}

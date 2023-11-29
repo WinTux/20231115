@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PasosIniciales.Herramientas;
 using PasosIniciales.Models;
 
 namespace PasosIniciales.Controllers
@@ -17,6 +18,28 @@ namespace PasosIniciales.Controllers
                 Nnombre = "Queso menonita", 
                 Precio = 30.6 
             };
+            Conversor.ObjetoAjson(HttpContext.Session, "producto", prod);
+            List<Producto3> prods = new List<Producto3>() { 
+                new Producto3
+                {
+                    Id = "PR01",
+                    Nnombre = "Atun",
+                    Precio = 10.8
+                },
+                new Producto3
+                {
+                    Id = "PR02",
+                    Nnombre = "Sardina",
+                    Precio = 20.5
+                },
+                new Producto3
+                {
+                    Id = "PR03",
+                    Nnombre = "Helado",
+                    Precio = 13.4
+                }
+            };
+            Conversor.ObjetoAjson(HttpContext.Session, "productos", prods);
             return View();
         }
     }
