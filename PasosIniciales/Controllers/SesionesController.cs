@@ -15,7 +15,7 @@ namespace PasosIniciales.Controllers
             // Ahora con objetos
             Producto3 prod = new Producto3 { 
                 Id = "QS001", 
-                Nnombre = "Queso menonita", 
+                Nombre = "Queso menonita", 
                 Precio = 30.6 
             };
             Conversor.ObjetoAjson(HttpContext.Session, "producto", prod);
@@ -23,19 +23,19 @@ namespace PasosIniciales.Controllers
                 new Producto3
                 {
                     Id = "PR01",
-                    Nnombre = "Atun",
+                    Nombre = "Atun",
                     Precio = 10.8
                 },
                 new Producto3
                 {
                     Id = "PR02",
-                    Nnombre = "Sardina",
+                    Nombre = "Sardina",
                     Precio = 20.5
                 },
                 new Producto3
                 {
                     Id = "PR03",
-                    Nnombre = "Helado",
+                    Nombre = "Helado",
                     Precio = 13.4
                 }
             };

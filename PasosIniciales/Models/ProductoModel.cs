@@ -10,21 +10,21 @@ namespace PasosIniciales.Models
                 new Producto3
                 {
                     Id = "PR01",
-                    Nnombre = "Atun",
+                    Nombre = "Atun",
                     Precio = 10.8,
                     Foto = "atun.jpg"
                 },
                 new Producto3
                 {
                     Id = "PR02",
-                    Nnombre = "Sardina",
+                    Nombre = "Sardina",
                     Precio = 20.5,
                     Foto = "sardina.png"
                 },
                 new Producto3
                 {
                     Id = "PR03",
-                    Nnombre = "Helado",
+                    Nombre = "Helado",
                     Precio = 13.4,
                     Foto = "helado3.jpg"
                 }
