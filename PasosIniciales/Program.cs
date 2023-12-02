@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using PasosIniciales.Models;
+
 namespace PasosIniciales
 {
     public class Program
@@ -9,7 +12,8 @@ namespace PasosIniciales
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddSession();
-
+            string cadena = builder.Configuration.GetConnectionString("MiConexion");
+            builder.Services.AddDbContext<TiendaDbContext>(op => op.UseLazyLoadingProxies().UseSqlServer(cadena));
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
