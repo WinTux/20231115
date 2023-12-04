@@ -11,21 +11,21 @@ namespace PasosIniciales.Models
                 {
                     Id = "PR01",
                     Nombre = "Atun",
-                    Precio = 10.8,
+                    Precio = (Decimal)10.8,
                     Foto = "atun.jpg"
                 },
                 new Producto3
                 {
                     Id = "PR02",
                     Nombre = "Sardina",
-                    Precio = 20.5,
+                    Precio = (Decimal)20.5,
                     Foto = "sardina.png"
                 },
                 new Producto3
                 {
                     Id = "PR03",
                     Nombre = "Helado",
-                    Precio = 13.4,
+                    Precio = (Decimal)13.4,
                     Foto = "helado3.jpg"
                 }
             };

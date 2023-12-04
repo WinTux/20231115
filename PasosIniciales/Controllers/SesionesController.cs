@@ -16,7 +16,7 @@ namespace PasosIniciales.Controllers
             Producto3 prod = new Producto3 { 
                 Id = "QS001", 
                 Nombre = "Queso menonita", 
-                Precio = 30.6 
+                Precio = (Decimal)30.6 
             };
             Conversor.ObjetoAjson(HttpContext.Session, "producto", prod);
             List<Producto3> prods = new List<Producto3>() { 
@@ -24,19 +24,19 @@ namespace PasosIniciales.Controllers
                 {
                     Id = "PR01",
                     Nombre = "Atun",
-                    Precio = 10.8
+                    Precio = (Decimal)10.8
                 },
                 new Producto3
                 {
                     Id = "PR02",
                     Nombre = "Sardina",
-                    Precio = 20.5
+                    Precio = (Decimal)20.5
                 },
                 new Producto3
                 {
                     Id = "PR03",
                     Nombre = "Helado",
-                    Precio = 13.4
+                    Precio = (Decimal)13.4
                 }
             };
             Conversor.ObjetoAjson(HttpContext.Session, "productos", prods);

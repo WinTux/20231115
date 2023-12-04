@@ -17,10 +17,11 @@ namespace PasosIniciales.Controllers
                         while (reader.Read()) {
                             string id = reader.GetString(0);
                             string nombre = reader.GetString(1);
+                            Decimal precio = reader.GetDecimal(2);
                             string? foto = reader.GetString(3);
                             ViewBag.id = id;
                             ViewBag.nombre = nombre;
-
+                            ViewBag.precio = precio;
                             ViewBag.foto = foto;
                         }
                         
